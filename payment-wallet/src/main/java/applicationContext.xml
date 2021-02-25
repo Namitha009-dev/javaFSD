@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<!--     
+    <bean  >
+        <property name="customerAccountNo" value="5011008999"></property>
+        <property name="customerName" value="Namitha"></property>
+    </bean> -->
+    
+    	<!-- For Spring to understand annotations -->
+	<context:annotation-config />
+	
+	 <!-- For @Components to be scannable -->
+    <context:component-scan base-package="com.namitha.training.ui"></context:component-scan>
+	 <context:component-scan base-package="com.namitha.training.bean"></context:component-scan>
+     <context:component-scan base-package="com.namitha.training.service"></context:component-scan>
+      <context:component-scan base-package="com.namitha.training.dao"></context:component-scan>
+</beans>

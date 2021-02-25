@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- <bean class="Fully Qualified Name of the Class here" id="Unique identifier 
+		for this bean"></bean> -->
+
+	<!-- Define bean for Engineer -->
+
+	<!-- Setter dependency injection here -->
+	<!-- <bean class="com.namitha.training.spring_starter_pro.Engineer" id="theEngineer"> 
+		<property name="engName" value="Namitha"></property> <property name="engId" 
+		value="22"></property> <property name="listOfAddress"> <list> <ref bean="theAddress"></ref> 
+		<ref bean="theSecondAddress"></ref> </list> </property> -->
+
+	<!-- Constructor dependency injection here -->
+
+	<!-- <constructor-arg value="Neha"></constructor-arg> <constructor-arg value="123"></constructor-arg> 
+		<constructor-arg ref="secondAddress"></constructor-arg> -->
+	<!-- </bean> -->
+
+	<!-- Define bean for Address -->
+
+	<bean class="com.namitha.training.spring_starter_pro.Address"
+		id="theAddress">
+		<property name="location" value="Kerala"></property>
+		<property name="pinCode" value="682033"></property>
+	</bean>
+	<bean class="com.namitha.training.spring_starter_pro.Address"
+		id="theSecondAddress">
+		<property name="location" value="Bengaluru"></property>
+		<property name="pinCode" value="682030"></property>
+	</bean> 
+	<!-- Define bean for Software Engineer -->
+	<bean init-method="callAtBeginning" destroy-method="callAtEnd"
+		class="com.namitha.training.spring_starter_pro.SoftwareEngineer"
+		id="softwareEngineer" autowire="byName" scope="prototype"></bean>
+
+</beans>
