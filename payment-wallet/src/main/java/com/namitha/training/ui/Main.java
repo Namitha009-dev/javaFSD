@@ -20,10 +20,11 @@ public class Main {
 	@Autowired
 	ServiceInterface serviceClass;
 	@Autowired
-	Customer theCustomer;
+	Customer customer;
 
 
 	public void getMenu() {
+		//serviceClass.dbConnect();
 		int ch = 0;
 		while (true) {
 
@@ -47,7 +48,7 @@ public class Main {
 		switch (choice) {
 		case 1:
 			inputCustomerDetails();
-			boolean isAccountCreated = serviceClass.createCustomerAccount(theCustomer);
+			boolean isAccountCreated = serviceClass.createCustomerAccount(customer);
 			validateAccount(isAccountCreated);
 			break;
 
@@ -116,8 +117,8 @@ public class Main {
 		String customerName = scan.nextLine();
 		System.out.println("Enter customer account number");
 		String customerAccountNumber = scan.nextLine();
-		theCustomer.setCustomerName(customerName);
-		theCustomer.setCustomerAccountNo(customerAccountNumber);
+		customer.setCustomerName(customerName);
+		customer.setCustomerAccountNo(customerAccountNumber);
 		
 
 	}

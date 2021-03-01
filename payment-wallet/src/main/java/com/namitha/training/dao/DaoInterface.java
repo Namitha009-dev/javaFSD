@@ -16,4 +16,6 @@ public interface DaoInterface {
 	ArrayList<String> getTransactionDetailsForTheAccount(String customerAccNumber);
 
 	void getFundTransfer(String customerDebitAccNumber,String customerCreditAccNumber,int amount);
+	
+	//void dbConnect();
 }

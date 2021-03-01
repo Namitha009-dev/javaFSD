@@ -44,4 +44,12 @@ public class ServiceClass implements ServiceInterface {
 		 dao.getFundTransfer(customerDebitAccNumber,customerCreditAccNumber,amount);
 	}
 
+//	@Override
+//	public void dbConnect() {
+//		dao.dbConnect();
+//		
+//	}
+	
+	
+
 }

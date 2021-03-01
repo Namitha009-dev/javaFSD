@@ -8,11 +8,13 @@ import com.namitha.training.ui.Main;
 public class Starter {
 
 	public static void main(String[] args) {
-       
-	    ClassPathXmlApplicationContext theContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+//      Load the context
+		ClassPathXmlApplicationContext theContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 //      reference the bean
-	    Main theCustomer= theContext.getBean("main", Main.class);
-	    theCustomer.getMenu();
+		Main theCustomer = theContext.getBean("main", Main.class);
+//    	Call methods on the bean instance
+		theCustomer.getMenu();
 
 	}
 

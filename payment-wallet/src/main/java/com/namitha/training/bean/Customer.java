@@ -9,7 +9,10 @@ public class Customer {
 
 	private String customerName;
 	private String customerAccountNo;
-
+	private int depositAmount;
+	private int withdrawalAmount;
+	private int balanceAmount;
+	
 	public String getCustomerName() {
 		return customerName;
 	}
@@ -24,6 +27,30 @@ public class Customer {
 
 	public void setCustomerAccountNo(String customerAccountNo) {
 		this.customerAccountNo = customerAccountNo;
+	}
+
+	public int getDepositAmount() {
+		return depositAmount;
+	}
+
+	public void setDepositAmount(int depositAmount) {
+		this.depositAmount = depositAmount;
+	}
+
+	public int getWithdrawalAmount() {
+		return withdrawalAmount;
+	}
+
+	public void setWithdrawalAmount(int withdrawalAmount) {
+		this.withdrawalAmount = withdrawalAmount;
+	}
+
+	public int getBalanceAmount() {
+		return balanceAmount;
+	}
+
+	public void setBalanceAmount(int balanceAmount) {
+		this.balanceAmount = balanceAmount;
 	}
 
 }
